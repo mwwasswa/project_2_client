@@ -1,17 +1,78 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>CrowdNoize!</h1>
+  </header>
+<div id="BoxOne">
+  <h2 id="message"></h2>
+  <form id='sign-up'>
+    <input type="email" name="credentials[email]" placeholder='Enter email...' required>
+    <input type="password" name="credentials[password]" placeholder='Enter password...' required>
+    <input type="password" name="credentials[password_confirmation]" placeholder='Enter password again'>
+    <button>Sign-Up</button>
+  </form>
+
+  <form id='sign-in'>
+    <input type="email" name="credentials[email]" placeholder='Enter email...'>
+    <input type="password" name="credentials[password]" placeholder='Enter password...'>
+    <button>Sign-In</button>
+  </form>
+</div>
+  <form id='create-team'>
+    <input name="team[team_name]" type="text" placeholder='Name...'>
+    <input name="team[team_sport]" type="text" placeholder='Sport...'>
+    <input name="team[team_city]" type="text" placeholder='City...'>
+    <input name="team[year_founded]" type="text" placeholder='Founded...'>
+    <input name="team[stadium]" type="text" placeholder='Stadium...'>
+    <input name="team[team_accolades]" type="text" placeholder='Accolades...'>
+    <button type="submit">Create Team</button>
+  </form>
+
+  <form id='update-team'>
+    <input name="team[team_name]" type="text" placeholder='Name...'>
+    <input name="team[team_sport]" type="text" placeholder='Sport...'>
+    <input name="team[team_city]" type="text" placeholder='City...'>
+    <input name="team[year_founded]" type="text" placeholder='Founded...'>
+    <input name="team[stadium]" type="text" placeholder='Stadium...'>
+    <input name="team[team_accolades]" type="text" placeholder='Accolades...'>
+    <input name="team[id]" type="number" placeholder='ID Number...'>
+    <button type="submit">Update Team</button>
+  </form>
+
+  <form id='show-teams'>
+    <button type="submit">Show Teams</button>
+  </form>
+
+  <form id='delete-team'>
+    <input name="team[id]" type="number" placeholder='ID Number...'>
+    <button type="submit">Delete Team</button>
+  </form>
+
+
+
+  <form id='change-password'>
+    <input type="password" name="passwords[old]" placeholder='Enter old password...'>
+    <input type="password" name="passwords[new]" placeholder='Enter new password'>
+    <button>Change-Password</button>
+  </form>
+
+  <form id='sign-out'>
+    <button>Sign-out</button>
+  </form>
+</body>
+
 </html>
