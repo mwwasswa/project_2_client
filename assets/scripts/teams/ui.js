@@ -94,7 +94,7 @@ const onDeleteTeamSuccess = function () {
 
 const onDeleteTeamFailure = function () {
   store.team = null
-  successMessage('Team deleted!')
+  successMessage('Delete team failed!')
   $('#delete-player').trigger('reset')
   console.log('Failed to deleted')
   $('#message').css('color', 'red')

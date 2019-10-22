@@ -17,12 +17,13 @@
   <header>
     <h1>CrowdNoize!</h1>
   </header>
-<div id="BoxOne">
   <h2 id="message"></h2>
+
+<div class="BoxOne">
   <form id='sign-up'>
     <input type="email" name="credentials[email]" placeholder='Enter email...' required>
     <input type="password" name="credentials[password]" placeholder='Enter password...' required>
-    <input type="password" name="credentials[password_confirmation]" placeholder='Enter password again'>
+    <input type="password" name="credentials[password_confirmation]" placeholder='Confirm password...'>
     <button>Sign-Up</button>
   </form>
 
@@ -33,6 +34,7 @@
   </form>
 </div>
 
+<div class="container">
   <form id='create-team'>
     <input name="team[team_name]" type="text" placeholder='Name...'>
     <input name="team[team_sport]" type="text" placeholder='Sport...'>
@@ -83,6 +85,8 @@
   <form id='sign-out'>
     <button>Sign-out</button>
   </form>
+
+</div>
 </body>
 
 </html>

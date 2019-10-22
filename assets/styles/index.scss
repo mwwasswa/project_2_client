@@ -1,23 +1,69 @@
-// @import '~bootstrap/scss/bootstrap';
-//
-// body {
-//   background-image: url("https://i.imgur.com/BURLLin.jpg");
-//   background-repeat: no-repeat;
-//   background-size: 1450px 850px;
-// }
-// //
-// header {
-//   text-align: center;
-//   color: #fff;
-// }
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  background-image: url('https://i.imgur.com/BURLLin.jpg');
+  background-repeat: no-repeat;
+  background-size: 1450px 850px;
+}
+
+header {
+  color: #fff;
+  font-family: 'Special Elite', cursive;
+  font-size: 100em;
+  text-align: center;
+}
+
+#message {
+  text-align: center;
+}
+
+input {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid white;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 100px;
+  outline: none;
+  text-align: center;
+  transition: border 0.5s;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+.create-team {
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.container {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.BoxOne {
+  color: white;
+  text-align: center;
+}
+
+
+
+
+
+
 //
 // input {
 //   width: 100%;
 //   opacity: 1;
 //   z-index: 1;
-// padding: 12px 20px;
+//  padding: 12px 20px;
 //  margin: 8px 0;
 //  box-sizing: border-box;
+//  border: none;
+//  color: blue;
 // }
 //
 // #BoxOne input[type=text] {
@@ -26,14 +72,15 @@
 // }
 //
 // #BoxOne {
-//   box-shadow: 0 10px 8px -8px white;
-//   z-index: -1;
-//   width: 600px;
 //   background-color: black;
-//   opacity: 0.6;
 //   border: 5px solid black;
-//   padding: 50px;
+//   box-shadow: 0 10px 8px -8px white;
+//   color: white;
+//   opacity: .6;
 //   margin: 20px 50px 50px 400px;
+//   padding: 50px;
+//   width: 600px;
+//   z-index: -1;
 // }
 
 // #BoxOne {
