@@ -32,6 +32,7 @@
     <button>Sign-In</button>
   </form>
 </div>
+
   <form id='create-team'>
     <input name="team[team_name]" type="text" placeholder='Name...'>
     <input name="team[team_sport]" type="text" placeholder='Sport...'>
@@ -53,9 +54,18 @@
     <button type="submit">Update Team</button>
   </form>
 
+  <div>
+    <div id='team-message'></div>
+  </div>
+
   <form id='show-teams'>
     <button type="submit">Show Teams</button>
   </form>
+
+  <form id='hide-teams'>
+    <button type="submit">Hide Teams</button>
+  </form>
+
 
   <form id='delete-team'>
     <input name="team[id]" type="number" placeholder='ID Number...'>

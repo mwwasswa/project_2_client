@@ -6,14 +6,13 @@ const successMessage = function (newText) {
   $('#message').removeClass('failure')
   $('#message').addClass('success')
   $('form').trigger('reset')
-  $('#message').css('color', 'green')
 }
 
 const failureMessage = function (newText) {
   $('#message').text(newText)
   $('#message').removeClass('success')
   $('#message').addClass('failure')
-  $('#message').css('color', 'red')
+  $('form').trigger('reset')
 }
 
 const onCreateTeamSuccess = function (newTeam) {
@@ -21,12 +20,14 @@ const onCreateTeamSuccess = function (newTeam) {
   successMessage('New Team Created!')
   $('form').trigger('reset')
   console.log('its working', newTeam)
+  $('#message').css('color', 'green')
 }
 
 const onCreateTeamFailure = function (data) {
   store.team = data.team
   console.log(store)
   failureMessage('Create Team Failed')
+  $('#message').css('color', 'red')
 }
 
 const onUpdateTeamSuccess = function (updateTeam) {
@@ -34,6 +35,7 @@ const onUpdateTeamSuccess = function (updateTeam) {
   successMessage('Team Updated!')
   $('form').trigger('reset')
   console.log('its working', updateTeam)
+  $('#message').css('color', 'green')
 }
 
 const onUpdateTeamFailure = function (updateTeam) {
@@ -41,12 +43,13 @@ const onUpdateTeamFailure = function (updateTeam) {
   successMessage('Update Failed!')
   $('form').trigger('reset')
   console.log('it did not update', updateTeam)
+  $('#message').css('color', 'red')
 }
 
 const onShowTeamsSuccess = function (data) {
   // config.team = data.team
-  console.log(data)
-  $('#show-teams').html('')
+  // console.log(data)
+  $('#team-message').html('')
 
   data.teams.forEach(team => {
     const teamsHTML = (`
@@ -59,8 +62,26 @@ const onShowTeamsSuccess = function (data) {
       <p>ID: ${team.id}</p>
       <br>
       `)
-    $('#show-teams').append(teamsHTML)
+    $('#team-message').append(teamsHTML)
   })
+}
+
+const onHideTeamsSuccess = function () {
+//   $('#show-team').html('')
+  $('#team-message').html('')
+// data.teams.forEach(team => {
+//   const teamsHTML = (`
+//   <p>Name: ${team.team_name}</p>
+//   <p>Sport: ${team.team_sport}</p>
+//   <p>City: ${team.team_city}</p>
+//   <p>Founded: ${team.year_founded}</p>
+//   <p>Stadium: ${team.stadium}</p>
+//   <p>Accolades: ${team.team_accolades}</p>
+//   <p>ID: ${team.id}</p>
+//   <br>
+//   `)
+//   $('#team-message').html(teamsHTML)
+// })
 }
 
 const onDeleteTeamSuccess = function () {
@@ -68,6 +89,7 @@ const onDeleteTeamSuccess = function () {
   successMessage('Team deleted!')
   $('#delete-player').trigger('reset')
   console.log('team deleted')
+  $('#message').css('color', 'green')
 }
 
 const onDeleteTeamFailure = function () {
@@ -75,6 +97,7 @@ const onDeleteTeamFailure = function () {
   successMessage('Team deleted!')
   $('#delete-player').trigger('reset')
   console.log('Failed to deleted')
+  $('#message').css('color', 'red')
 }
 
 module.exports = {
@@ -84,5 +107,6 @@ module.exports = {
   onUpdateTeamFailure,
   onShowTeamsSuccess,
   onDeleteTeamSuccess,
-  onDeleteTeamFailure
+  onDeleteTeamFailure,
+  onHideTeamsSuccess
 }

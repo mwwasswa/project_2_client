@@ -10,6 +10,11 @@ const teamsEvents = require('./teams/events')
 // require('./example')
 
 $(() => {
+  $('#hide-teams').hide()
+  $('#create-team').hide()
+  $('#update-team').hide()
+  $('#show-teams').hide()
+  $('#delete-team').hide()
   $('#change-password').hide()
   $('#sign-out').hide()
   $('#sign-up').on('submit', authEvents.onSignUp)
@@ -19,5 +24,6 @@ $(() => {
   $('#create-team').on('submit', teamsEvents.onCreateTeam)
   $('#update-team').on('submit', teamsEvents.onUpdateTeam)
   $('#show-teams').on('submit', teamsEvents.onShowTeams)
+  $('#hide-teams').on('submit', teamsEvents.onHideTeams)
   $('#delete-team').on('submit', teamsEvents.onDeleteTeam)
 })

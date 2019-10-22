@@ -39,6 +39,11 @@ const onSignInSuccess = function (responseData) {
   $('#change-password').show()
   $('#sign-out').show()
   $('#BoxOne').hide()
+  $('#create-team').show()
+  $('#update-team').show()
+  $('#show-teams').show()
+  $('#delete-team').show()
+  $('#hide-teams').show()
 }
 
 const onSignInFailure = function () {
@@ -52,7 +57,13 @@ const onSignOutSuccess = function () {
   $('#sign-up, #sign-in').show()
   $('#change-password').hide()
   $('#sign-out').hide()
-  $('#BoxOne').hide()
+  $('#BoxOne').show()
+  $('#create-team').hide()
+  $('#update-team').hide()
+  $('#show-teams').hide()
+  $('#delete-team').hide()
+  $('#team-message').html('')
+  $('#hide-teams').hide()
 }
 
 const onSignOutFailure = function () {

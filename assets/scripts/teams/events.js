@@ -35,6 +35,13 @@ const onShowTeams = function (event) {
     .catch(ui.onShowTeamsFailure)
 }
 
+const onHideTeams = function (event) {
+  event.preventDefault()
+//   api.hideTeams()
+//     .then(ui.onHideTeamsSuccess)
+//     .catch(ui.onHideTeamsFailure)
+}
+
 const onDeleteTeam = function (event) {
   event.preventDefault()
   // const form = event.target
@@ -51,5 +58,6 @@ module.exports = {
   onCreateTeam,
   onUpdateTeam,
   onShowTeams,
-  onDeleteTeam
+  onDeleteTeam,
+  onHideTeams
 }
