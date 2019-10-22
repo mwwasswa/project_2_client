@@ -4,6 +4,7 @@ body {
   background-image: url('https://i.imgur.com/BURLLin.jpg');
   background-repeat: no-repeat;
   background-size: 1450px 850px;
+  opacity: 2;
 }
 
 header {
@@ -47,8 +48,13 @@ input {
 .BoxOne {
   color: white;
   text-align: center;
+  margin-bottom: 15px;
+  margin-top: 200px;
 }
 
+form {
+  margin-bottom: 50px;
+}
 
 
 

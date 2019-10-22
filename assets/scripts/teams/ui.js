@@ -63,6 +63,7 @@ const onShowTeamsSuccess = function (data) {
       <br>
       `)
     $('#team-message').append(teamsHTML)
+    $('#team-message').css('color', 'white')
   })
 }
 
