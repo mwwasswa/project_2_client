@@ -24,6 +24,6 @@ $(() => {
   $('#create-team').on('submit', teamsEvents.onCreateTeam)
   $('#update-team').on('submit', teamsEvents.onUpdateTeam)
   $('#show-teams').on('submit', teamsEvents.onShowTeams)
-  $('#hide-teams').on('submit', teamsEvents.onHideTeams)
+  $('#hide-teams').on('click', teamsEvents.onHideTeams)
   $('#delete-team').on('submit', teamsEvents.onDeleteTeam)
 })

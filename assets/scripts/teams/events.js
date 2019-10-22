@@ -37,6 +37,8 @@ const onShowTeams = function (event) {
 
 const onHideTeams = function (event) {
   event.preventDefault()
+  console.log('hide teams')
+  ui.onHideTeamsSuccess()
 //   api.hideTeams()
 //     .then(ui.onHideTeamsSuccess)
 //     .catch(ui.onHideTeamsFailure)
