@@ -3,6 +3,9 @@ const store = require('../store')
 
 const successMessage = function (newText) {
   $('#message').text(newText)
+  setTimeout(function () {
+    $('#message').html('')
+  }, 2000)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
   $('form').trigger('reset')
@@ -10,6 +13,9 @@ const successMessage = function (newText) {
 
 const failureMessage = function (newText) {
   $('#message').text(newText)
+  setTimeout(function () {
+    $('#message').html('')
+  }, 2000)
   $('#message').removeClass('success')
   $('#message').addClass('failure')
   $('form').trigger('reset')
