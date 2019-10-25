@@ -25,13 +25,13 @@ const onCreateTeamSuccess = function (newTeam) {
   store.team = newTeam.team
   successMessage('New Team Created!')
   $('form').trigger('reset')
-  console.log('its working', newTeam)
+  // console.log('its working', newTeam)
   $('#message').css('color', 'green')
 }
 
 const onCreateTeamFailure = function (data) {
   store.team = data.team
-  console.log(store)
+  // console.log(store)
   failureMessage('Create Team Failed')
   $('#message').css('color', 'red')
 }
@@ -40,7 +40,7 @@ const onUpdateTeamSuccess = function (updateTeam) {
   store.team = updateTeam.team
   successMessage('Team Updated!')
   $('form').trigger('reset')
-  console.log('its working', updateTeam)
+  // console.log('its working', updateTeam)
   $('#message').css('color', 'green')
 }
 
@@ -48,7 +48,7 @@ const onUpdateTeamFailure = function (updateTeam) {
   store.team = updateTeam.team
   successMessage('Update Failed!')
   $('form').trigger('reset')
-  console.log('it did not update', updateTeam)
+  // console.log('it did not update', updateTeam)
   $('#message').css('color', 'red')
 }
 
@@ -56,7 +56,6 @@ const onShowTeamsSuccess = function (data) {
   // config.team = data.team
   // console.log(data)
   $('#team-message').html('')
-
   data.teams.forEach(team => {
     const teamsHTML = (`
       <p>Name: ${team.team_name}</p>
@@ -69,6 +68,7 @@ const onShowTeamsSuccess = function (data) {
       <br>
       `)
     $('#team-message').append(teamsHTML)
+    successMessage('Your Available Teams!')
     $('#team-message').css('color', 'white')
   })
 }
@@ -95,7 +95,7 @@ const onDeleteTeamSuccess = function () {
   store.team = null
   successMessage('Team deleted!')
   $('#delete-player').trigger('reset')
-  console.log('team deleted')
+  // console.log('team deleted')
   $('#message').css('color', 'green')
 }
 
@@ -103,7 +103,7 @@ const onDeleteTeamFailure = function () {
   store.team = null
   successMessage('Delete team failed!')
   $('#delete-player').trigger('reset')
-  console.log('Failed to deleted')
+  // console.log('Failed to deleted')
   $('#message').css('color', 'red')
 }
 

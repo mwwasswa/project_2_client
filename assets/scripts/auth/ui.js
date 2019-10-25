@@ -2,7 +2,7 @@
 const store = require('../store')
 
 const successMessage = function (newText) {
-  console.log('success message!')
+  // console.log('success message!')
   $('#message').text(newText)
   setTimeout(function () {
     $('#message').html('')

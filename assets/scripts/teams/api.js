@@ -3,7 +3,7 @@ const config = require('../config')
 const store = require('../store')
 
 const createTeam = function (formData) {
-  console.log('created team')
+  // console.log('created team')
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/teams/',
@@ -41,7 +41,7 @@ const showTeams = function (events) {
 }
 
 const deleteTeam = function (formData) {
-  console.log(formData.team.id)
+  // console.log(formData.team.id)
   return $.ajax({
     method: 'DELETE',
     url: config.apiUrl + '/teams/' + formData.team.id,

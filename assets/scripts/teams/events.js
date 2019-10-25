@@ -17,8 +17,8 @@ const onUpdateTeam = function (event) {
   const form = event.target
   const formData = getFormFields(form)
   const id = formData.team.id
-  console.log(formData)
-  console.log(formData.team.id_number)
+  // console.log(formData)
+  // console.log(formData.team.id_number)
   api.updateTeam(formData, id)
     .then(ui.onUpdateTeamSuccess)
     .catch(ui.onUpdateTeamFailure)

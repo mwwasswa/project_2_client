@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Example</title>
+  <title>CrowdNoize</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags-->
@@ -23,36 +23,36 @@
   <form id='sign-up'>
     <input type="email" name="credentials[email]" placeholder='Enter email...' required>
     <input type="password" name="credentials[password]" placeholder='Enter password...' required>
-    <input type="password" name="credentials[password_confirmation]" placeholder='Confirm password...'>
+    <input type="password" name="credentials[password_confirmation]" placeholder='Confirm password...' required>
     <button>Sign-Up</button>
   </form>
 
   <form id='sign-in'>
-    <input type="email" name="credentials[email]" placeholder='Enter email...'>
-    <input type="password" name="credentials[password]" placeholder='Enter password...'>
+    <input type="email" name="credentials[email]" placeholder='Enter email...' required>
+    <input type="password" name="credentials[password]" placeholder='Enter password...' required>
     <button>Sign-In</button>
   </form>
 </div>
 
 <div class="container">
   <form id='create-team'>
-    <input name="team[team_name]" type="text" placeholder='Name...'>
-    <input name="team[team_sport]" type="text" placeholder='Sport...'>
-    <input name="team[team_city]" type="text" placeholder='City...'>
-    <input name="team[year_founded]" type="text" placeholder='Founded...'>
-    <input name="team[stadium]" type="text" placeholder='Stadium...'>
-    <input name="team[team_accolades]" type="text" placeholder='Accolades...'>
+    <input name="team[team_name]" type="text" placeholder='Name...' required>
+    <input name="team[team_sport]" type="text" placeholder='Sport...' required>
+    <input name="team[team_city]" type="text" placeholder='City...' required>
+    <input name="team[year_founded]" type="text" placeholder='Founded...' required>
+    <input name="team[stadium]" type="text" placeholder='Stadium...' required>
+    <input name="team[team_accolades]" type="text" placeholder='Accolades...' required>
     <button type="submit">Create Team</button>
   </form>
 
   <form id='update-team'>
-    <input name="team[team_name]" type="text" placeholder='Name...'>
-    <input name="team[team_sport]" type="text" placeholder='Sport...'>
+    <input name="team[team_name]" type="text" placeholder='Name...' required>
+    <input name="team[team_sport]" type="text" placeholder='Sport...' required>
     <input name="team[team_city]" type="text" placeholder='City...'>
-    <input name="team[year_founded]" type="text" placeholder='Founded...'>
+    <input name="team[year_founded]" type="text" placeholder='Founded...' required>
     <input name="team[stadium]" type="text" placeholder='Stadium...'>
-    <input name="team[team_accolades]" type="text" placeholder='Accolades...'>
-    <input name="team[id]" type="number" placeholder='ID Number...'>
+    <input name="team[team_accolades]" type="text" placeholder='Accolades...' required>
+    <input name="team[id]" type="number" placeholder='ID Number...' required>
     <button type="submit">Update Team</button>
   </form>
 
@@ -70,15 +70,15 @@
 
 
   <form id='delete-team'>
-    <input name="team[id]" type="number" placeholder='ID Number...'>
+    <input name="team[id]" type="number" placeholder='ID Number...' required>
     <button type="submit">Delete Team</button>
   </form>
 
 
 
   <form id='change-password'>
-    <input type="password" name="passwords[old]" placeholder='Enter old password...'>
-    <input type="password" name="passwords[new]" placeholder='Enter new password'>
+    <input type="password" name="passwords[old]" placeholder='Enter old password...' required>
+    <input type="password" name="passwords[new]" placeholder='Enter new password' required>
     <button>Change-Password</button>
   </form>
 
